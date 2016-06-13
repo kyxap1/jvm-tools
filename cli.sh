@@ -26,11 +26,11 @@ LANG=C
 # locations
 PATH="/bin:/usr/sbin:/usr/bin:/sbin:/usr/local/bin:/usr/local/sbin:$PATH"
 
-#AR="/home/kyxap/tmp/jvm-tools/sjk-core/target/sjk-plus-0.4.2-SNAPSHOT.jar"
-JAR="/home/kyxap/tmp/jvm-tools/sjk-plus/target/sjk-plus-0.4.2-SNAPSHOT.jar"
+JAR="/opt/jvm-tools/sjk-plus-0.4.2-SNAPSHOT.jar"
 
 JMX_PROTO="http-remoting-jmx"
-LIB_DIR="/opt/wildfly/bin/client"
+WF_HOME="/opt/wildfly"
+LIB_DIR="${WF_HOME}/bin/client"
 
 java -Djmx.service.protocol=${JMX_PROTO} -Djava.ext.dirs=${LIB_DIR} -jar "$JAR" $@
 
